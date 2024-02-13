@@ -13,25 +13,8 @@
         
         fetch("https://api.vatcomply.com/rates", requestOptions)
           .then(response => response.text())
-          .then(result => {
-           var response = {
-            items: []
-           };
-
-        
-            response.items.push{
-             "title": "EUR";
-              "detail": item.rates.EUR;
-            };
-
-         response.items.push{
-             "title": "USD";
-              "detail": item.rates.USD;
-            };
-          });
-
-      document.body.innerhtml = response;
-         
+          .then(result => document.body.innerhtml = response)
+    
           .catch(error => console.log('error', error));
      };
    </script>
