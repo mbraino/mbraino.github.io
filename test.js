@@ -1,4 +1,4 @@
-function myFunction() {
+
         var test = "";
         var requestOptions = {
           method: 'GET',
@@ -12,5 +12,4 @@ function myFunction() {
           .catch(error => console.log('error', error));
 
   return test;
-};
    
