@@ -3,23 +3,9 @@
   
  </head>
  
- <body onload = "myFunction()">
-   <div id="div1"></div>
+ <body>
 
    <!-- Script -->
- <script>
-     function myFunction() {
-        var requestOptions = {
-          method: 'GET',
-          redirect: 'follow'
-        };
-        
-        fetch("https://api.vatcomply.com/rates", requestOptions)
-          .then(response => response.text())
-          .then(result => document.body.innertext = result)
-    
-          .catch(error => console.log('error', error));
-     };
-   </script>
+ <script type="module" src="./test.js"></script><!-- Or inline script -->
  </body>
 </html>
