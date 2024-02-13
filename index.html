@@ -1,10 +1,6 @@
 <html>
- 
- <body onload = "myFunction()">
-   <div id="div1"></div>
-
-   <!-- Script -->
-   <script>
+ <head>
+<script>
      function myFunction() {
         var requestOptions = {
           method: 'GET',
@@ -13,10 +9,18 @@
         
         fetch("https://api.vatcomply.com/rates", requestOptions)
           .then(response => response.text())
-          .then(result => document.body.innerhtml = response)
+          .then(result => document.body.innerhtml = result)
     
           .catch(error => console.log('error', error));
      };
    </script>
+  
+ </head>
+ 
+ <body onload = "myFunction()">
+   <div id="div1"></div>
+
+   <!-- Script -->
+ 
  </body>
 </html>
