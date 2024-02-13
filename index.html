@@ -16,12 +16,17 @@
         
         fetch("https://api.vatcomply.com/rates", requestOptions)
           .then(response => response.text())
-          .then(result => document.body.innerHTML = result)
+          /*.then(result => document.body.innerHTML = result)*/
+         .then(result => myFunction2(result))
           .catch(error => console.log('error', error));
      };
 
-     function myFunction2() {
-        
+     function myFunction2(string result) {
+        const para = document.createElement("p");
+        const node = document.createTextNode(result);
+        para.appendChild(node);
+        const element = document.getElementById("div1");
+        element.appendChild(para);
      };
    </script>
  </body>
